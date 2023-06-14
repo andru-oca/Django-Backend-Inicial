@@ -1,131 +1,115 @@
 
-# _HERENCIA
-
+# ABSTRACCION
 
 class _Persona_:
-    piernas:bool = True
+    vive = True
 
-    def saludo():
+    def muerto_vivo(self):
+        if self.vive:
+            print("aun esta vigente")
+        else:
+            print("esta fallecido")
+
+    def soy(self):
         pass
 
-class Padre(_Persona_):
-    def __init__(self, nombre , color_ojos):
+
+class Premium:
+    tiempo_vida_premium = "1 mes"
+
+    def premium(self):
+        print(f"El cliente tiene {self.tiempo_vida_premium} de plan premium")
+
+# ENCAPSULACION 
+
+class Cliente(_Persona_):
+    status = True
+
+    def __init__(self, nombre, cbu ,password):
         self.nombre = nombre
-        self.color_ojos = color_ojos
+        self.__cbu = cbu
+        self.__password = password
 
+    # getters y setters
+    def get_cbu(self):
+        print(f"El cbu de la cliente{self.nombre} es:\n{self.__cbu}")
 
-    def saludo(self):
-        return "Hola!! como vas?"
+    def set_cbu(self,cbu):
+        self.__cbu = cbu
 
+    # setter
+    def set_passwd(self,pwd):
+        print(f"se ha cambiado el pass por: \n==> Old:{self.__password}")
+        self.__password = pwd
+        print(f"\n==> New: {self.__password}")
 
-class Madre:
-    ganas_de_formar_familia = True
-
-    def __init__(self,baila:bool):
-        self.baila =baila
-
-    def cocinar_rico(self):
-        return "se cocinar excelente un pastel de papas!"
-
-class HijoMenor(Padre,Madre):
-
-    def __init__(self,nombre , color_ojos,altura,baila=False):
-        Padre.__init__(self, nombre , color_ojos)
-        Madre.__init__(self, baila)
-        self.altura = altura
-
-    def saludo(self):
-        return "YO SALUDO GRITANDO!!!"
-
-
-class Hijo(Padre,Madre):
-    __cuenta_bancaria:str
-
-    def __init__(self,nombre , color_ojos,altura,baila=False):
-        Padre.__init__(self, nombre , color_ojos)
-        Madre.__init__(self, baila)
-        self.altura = altura
-
-    
-    def rebelde(self):
-        return "me gusta rbd"
-
-    # setear datos a los privados
-    def agrear_cuenta(self, cuenta_bancaria):
-        self.__cuenta_bancaria = cuenta_bancaria
-    # get datos a los privados
-    def mostrar_cuenta_bancaria(self):
-        return self.__cuenta_bancaria
-
+    def activo(self):
+        if self.status:
+            print(f"el cliente {self.__cbu} está activo")
+        else:
+            print(f"el cliente {self.__cbu} no está activo")
     
 
+celeste = Cliente("celeste",172389471,"hola1234")
 
-class Hija(Padre):
-    def __init__(self, nombre , color_ojos , coqueta):
-        Padre.__init__(self, nombre , color_ojos)
-        
-        self.coqueta =  coqueta
+celeste.get_cbu() 
+print(celeste._Cliente__cbu)
 
-
-    def reparar(self):
-        return "puedo reparar todo"
-
-    def carpinteria(self):
-        return "te armo un banquito"
-        
-
-martin = Hijo("martin","azules" , 1.75)
-benja= HijoMenor("benjamin","marron", 2.0,True)
-
-cecilia = Hija("cecilia","gris",100)
-
-print("soy martin")
-print(martin.rebelde())
-print(martin.saludo())
-
-print("#"*50)
-print(martin.cocinar_rico())
-print(martin.ganas_de_formar_familia)
-print(martin.baila)
-
-print("#"*50)
-print("soy cecilia")
-print( cecilia.reparar())
-print( cecilia.carpinteria())
-print( cecilia.saludo())
+celeste.set_passwd("ola k ase?")
 
 
-print("#"*50)
-martin.agrear_cuenta(1123123123)
-# print(martin.mostrar_cuenta_bancaria())
-print(martin._Hijo__cuenta_bancaria)
+# HERENCIA
 
-print("#"*50)
-print(benja.saludo())
 
-print(martin.piernas)
+class ClienteFisico(Cliente):
+    def __init__(self,nombre,cbu,password, dni):
+        Cliente.__init__(self,nombre,cbu,password)
+        self.dni = dni
+
+    def soy(self):
+        print("soy una cliente fisico")
+
+
+class CuentasActivas:
+    def __init__(self, cant_cuentas):
+        self.cuentas_activas = cant_cuentas
+
+    def mostra_cuentas_activas(self):
+        print(f"la cantidad de cuentas activas es: {self.cuentas_activas}")
+
+class ClienteJuridico(Cliente,Premium):
+    def __init__(self, CUIT):
+        self.CUIT = CUIT
+
+    def soy(self):
+        print("soy una cliente Juridico")
+
+    def cuentas_activas(self,cuentas:CuentasActivas):
+        cuentas.mostra_cuentas_activas()
 
 
 
+cliente_fisico = ClienteFisico(
+    "Ale",
+    786781627381,
+    "klkajskldjaklsjd",
+    987128937
+)
 
-# decorador
+cliente_fisico.soy()
 
+cliente_juridico= ClienteJuridico("29-79817238971-9")
 
-def deco_zero(fn):
-    def analisis(a,b):
-        if b==0:
-            print("zapallo, como vas a divir por cero??")
-            return
-        return fn(a,b)
-    
-    return  analisis
-
-
-@deco_zero
-def division(a,b):
-    print(a/b)
+cliente_juridico.set_cbu(871289378912)
+cliente_juridico.activo()
 
 
+print(f"ESTE CLIENTE ES JUIRIDICO, PERO => cual es su estatus de vida ?? -> {cliente_juridico.vive}")
 
-division(1,10)
+cliente_juridico.premium()
 
+cuentas_juridico = CuentasActivas(10)
+cuentas_medium = CuentasActivas(5)
+
+
+cliente_juridico.cuentas_activas(cuentas_medium)
