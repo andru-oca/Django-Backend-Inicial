@@ -30,6 +30,7 @@ class CrudApp(InsertUser,DeleteUser,ShowUsers,UpdateUser,ShowUser):
 
         
         self.db = kwargs["db"]
+        
         try:
             self.cnx = pymysql.connect(
                 

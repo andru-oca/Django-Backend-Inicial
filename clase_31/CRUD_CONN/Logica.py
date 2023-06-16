@@ -6,18 +6,22 @@ class InsertUser:
 
         self.cnx.cursor()
 
-        query = f"""
-        INSERT INTO {self.db}.{self.table_name}
-        (nombre,email,password) 
-        VALUES
-        {user.returned_string()};
-        """
-        self.cursor.execute(query)
-        self.cnx.commit()
+        try:
+            query = f"""
+            INSERT INTO {self.db}.{self.table_name}
+            (nombre,email,password) 
+            VALUES
+            {user.returned_string()};
+            """
+            self.cursor.execute(query)
+            self.cnx.commit()
 
-        print(f"Usuario {user.nombre} ha sido cargado en la base de datos")
+            print(f"Usuario {user.nombre} ha sido cargado en la base de datos")
 
+        except Exception as e :
+            print(e)
 
+            
 class DeleteUser:
 
     def delete_user(self,email:str):

@@ -7,7 +7,7 @@ def main():
     print("software para crear CRUD de USUARIOS")
 
     while True:
-        print("""
+        opcion = input("""
         elija una opcion para continuar
         1 -> crear usuario
         2 -> borrar usuario
@@ -15,8 +15,6 @@ def main():
         4 -> mostrar usuarios
         0 --> para salir
         """)
-
-        opcion = input("")
 
         if opcion == "0":
             print("Gracias por usar el software")
