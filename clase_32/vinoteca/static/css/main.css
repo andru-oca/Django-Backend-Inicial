@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+* {
+    margin: 0;
+
+    font-family: "Raleway", sans-serif;
+
+    scroll-behavior: smooth;
+}
+
+body {
+    /* background-image: url('https://www.todofondos.net/wp-content/uploads/1920x1080-Anime-Cat-Wallpaper-768x432.jpg'); */
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9a37bf7d-646b-48e4-b09b-6d36d37437b7/d3jl6jh-06a810d1-b43f-410d-93e6-4102c21c44b0.jpg/v1/fill/w_900,h_600,q_75,strp/dark_blue_background_01_by_limited_vision_stock_d3jl6jh-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjAwIiwicGF0aCI6IlwvZlwvOWEzN2JmN2QtNjQ2Yi00OGU0LWIwOWItNmQzNmQzNzQzN2I3XC9kM2psNmpoLTA2YTgxMGQxLWI0M2YtNDEwZC05M2U2LTQxMDJjMjFjNDRiMC5qcGciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.TtEGXxWzIwOxlQgY_p92QIreiexxbMLsXYVIXQNWsQ8");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+header {
+    height: 20vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+header a {
+    text-decoration: none;
+    color: #555;
+}
+
+header li {
+    list-style: none;
+    margin: 1rem;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.primer_sector,
+.segundo_sector,
+.tercer_sector {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 70vh;
+}
+
+.primer_sector > div,
+.segundo_sector > div,
+.tercer_sector > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+.data {
+    width: 100%;
+    background-color: #555;
+    color: white;
+}
+
+.data > p {
+    width: 50%;
+}
+
+.img {
+    background-color: palegoldenrod;
+}
+
+img {
+    height: 13rem;
+    position: relative;
+    left: -50%;
+}
+
+.bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    background-image: url("../imgs/fire.webp");
+}
+
+.bg2 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    background-image: url("../imgs/landing.webp");
+}
+
+.up {
+    position: fixed;
+    bottom: 20px;
+    font-size: 2rem;
+    right: 1rem;
+}
+.up > a {
+    text-decoration: none;
+}
+
+.noShow {
+    display: none;
+}
+
+/*TODO SPINNER*/
+
+/*TODO OverFLOW*/
+
+.section_data {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    color: white;
+    margin: 0 0 1rem 6rem;
+    height: 70vh;
+}
+
+.container {
+    color: white;
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+.spinner-border:before {
+    content: "soy un spinner";
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
+    padding: 4rem;
+}
+
+table img {
+    height: 4rem;
+    position: relative;
+    left: 0;
+}
+input {
+    width: 40%;
+    font-weight: 900;
+}
