@@ -1,0 +1,50 @@
+main{
+    height: 140rem;
+    width: 100%;
+    background-color: white;
+}
+
+#imgPres{
+    width: 100%;
+    padding: 2% 15% 2% 15%;
+}
+
+.presentacion{
+    position: relative;
+    text-align: justify;
+}
+.texPres{
+    color: black;
+    background-color: rgba(155, 151, 151, 0.42);
+    font-size: 1.3rem;
+    font-weight:bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.carrousel{
+    height: 15rem;
+    width: 30rem;
+    position: absolute;
+    margin-left: 3rem;
+    margin-top: 10rem;
+}
+.quees{
+    height: 70rem;
+    width: 50rem;
+    margin-left: 35rem;
+    text-align: justify;
+    font-family: 'Dongle', sans-serif;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Sen', sans-serif; 
+}
+#sistema{
+   text-align: center;
+   padding-bottom: 10%;
+}
+
+
+    
+

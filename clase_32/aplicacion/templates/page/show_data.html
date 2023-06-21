@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/ico"
+            href="../media/android-icon-192x192.png"
+        />
+        <link rel="stylesheet" href="{% static './css/estilo.css' %}" />
+
+        <title>Datos recibidos</title>
+    </head>
+    <body>
+        <header>
+            <div align="center">
+                <img id="logo" src="../media/logo.png" alt="No encontrada" />
+            </div>
+        </header>
+
+        <h1 align="center">
+            <font size="+1">Tu información de contacto es:</font>
+        </h1>
+        <hr />
+        <br />
+        <table border="2" align="center" width="500">
+            <tr>
+                <th align="center"></th>
+                <th align="center">Tus Datos</th>
+            </tr>
+
+            <script language="javascript">
+                var args = location.search.substr(1).split("&");
+                for (var i = 0; i < args.length; ++i) {
+                    var parts = args[i].split("=");
+                    if (parts != null) {
+                        var field = parts[0];
+                        var value = parts[1];
+                        if (value == null) {
+                            value = "null";
+                        } else {
+                            value =
+                                '"' + unescape(value.replace(/\+/g, " ")) + '"';
+                        }
+
+                        document.writeln(
+                            '<tr><td align="center">' + field + "</td>",
+                        );
+                        document.writeln(
+                            '<td align="center">' + value + "</td></tr>",
+                        );
+                    }
+                }
+            </script>
+        </table>
+    </body>
+</html>

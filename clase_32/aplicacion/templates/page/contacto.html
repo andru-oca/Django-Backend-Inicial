@@ -1,0 +1,119 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<main>
+    <img id="plantas" src="{% static './media/plantas_agua.jpg' %}" alt="" />
+
+    <div class="formContainer">
+        <form action="./show_data.html" target="_blank">
+            <p><b> Formulario de registro</b></p>
+            <div class="box">
+                <label for="apellido">Apellido</label>
+                <input
+                    class="box"
+                    type="text"
+                    name="Apellido"
+                    id="apellido"
+                    required
+                    required
+                    placeholder="Ingrese su apellido"
+                    autocomplete="off"
+                />
+                <label for="nombre">Nombre </label>
+                <input
+                    class="box"
+                    type="text"
+                    name="Nombre"
+                    id="nombre"
+                    required
+                    required
+                    placeholder="Ingrese su nombre"
+                    autocomplete="off"
+                />
+                <br /><br />
+                <label for="nacimiento">Fecha de nacimiento</label>
+                <input
+                    class="box"
+                    type="date"
+                    name="Nacimiento"
+                    id="nacimiento"
+                    required
+                    placeholder="dd/mm/yy"
+                    autocomplete="off"
+                />
+                <br /><br />
+                <label for="email">E-mail</label>
+                <input
+                    class="box"
+                    type="email"
+                    name="Email"
+                    id="email"
+                    required
+                    required
+                    placeholder="Ingrese su E-mail"
+                    autocomplete="off"
+                />
+                <br /><br />
+                <label for="telefono">Teléfono</label>
+                <input
+                    class="box"
+                    type="tel"
+                    name="Telefono"
+                    id="telefono"
+                    size="10"
+                    required
+                    placeholder="Ej. 3416086313"
+                    autocomplete="off"
+                />
+                <br /><br />
+                <label for="Localidad">Localidad</label>
+                <input
+                    class="box"
+                    type="text"
+                    name="Localidad"
+                    id="localidad"
+                    required
+                    required
+                    placeholder="Ingrese su localidad"
+                    autocomplete="off"
+                />
+                <br /><br />
+                <label for="cp">Código Postal</label>
+                <input
+                    class="box"
+                    type="number"
+                    name="CP"
+                    id="cp"
+                    required
+                    required
+                    placeholder="Cod. Postal"
+                    autocomplete="off"
+                />
+                <br /><br />
+                <fieldset>
+                    <legend>
+                        ¿Quiere recibir promociones de nuestros productos?
+                    </legend>
+                    <label for="promociones">Elija una opción:</label>
+                    <input
+                        type="radio"
+                        name="Promociones"
+                        value="si"
+                        required
+                    />Si
+                    <input
+                        type="radio"
+                        name="Promociones"
+                        value="no"
+                        required
+                    />No
+                </fieldset>
+                <br />
+
+                <input type="submit" value="Enviar" />
+                <input type="reset" value="Borrar" />
+            </div>
+        </form>
+    </div>
+</main>
+
+{% endblock %}

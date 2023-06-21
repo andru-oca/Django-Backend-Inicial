@@ -1,0 +1,162 @@
+[
+    {
+     "IDp": 10000001,
+     "Descrip": "Semillas Mix de Hojas Verdes",
+     "Price": 150,
+     "Obs": "semillas",
+     "Stock": 100,
+     "Sold": 5,
+     "URLimg": "../media/Sales\/semillas1.webp"
+    },
+    {
+     "IDp": 10000002,
+     "Descrip": "Semillas Frutos de la tierra",
+     "Price": 150,
+     "Obs": "semillas",
+     "Stock": 100,
+     "Sold": 5,
+     "URLimg": "..\/media\/Sales\/semillas2.webp"
+    },
+    {
+     "IDp": 20000001,
+     "Descrip": "Espuma fenólica",
+     "Price": 5000,
+     "Obs": "espuma fenolica",
+     "Stock": 100,
+     "Sold": 5,
+     "URLimg": "..\/media\/Sales\/espuma.webp"
+    },
+    {
+     "IDp": 20000002,
+     "Descrip": "Kit Hidropónico - Sistema completo",
+     "Price": 50,
+     "Obs": "kit",
+     "Stock": 20,
+     "Sold": 5,
+     "URLimg": "..\/media\/Sales\/kit.webp"
+    },
+    {
+     "IDp": 20000003,
+     "Descrip": "Plantines varios",
+     "Price": 200,
+     "Obs": "plantines",
+     "Stock": 5000,
+     "Sold": 5,
+     "URLimg": "..\/media\/Sales\/plantin.jpg"
+    },
+    {
+     "IDp": 25000003,
+     "Descrip": "Bomba 820 l\/h",
+     "Price": 5640,
+     "Obs": "Bomba para hidroponia que ofrece un caudal de 820 litros por hora, para instalacione spequeñas",
+     "Stock": 10,
+     "Sold": 15,
+     "URLimg": "..\/media\/Sales\/Bomba820.jpg"
+    },
+    {
+     "IDp": "28000003.4",
+     "Descrip": "Bomba 2500 l\/h",
+     "Price": 12475,
+     "Obs": "Bomba para hidroponia que ofrece un caudal de 2500 litros por hora, para instalacione spequeñas",
+     "Stock": 10,
+     "Sold": 12,
+     "URLimg": "..\/media\/Sales\/Bomba2500.jpg"
+    },
+    {
+     "IDp": "31000003.8",
+     "Descrip": "Caño hidroponia x4 metros",
+     "Price": 8900,
+     "Obs": "caño acanalado de PVC",
+     "Stock": 10,
+     "Sold": 32,
+     "URLimg": "..\/media\/Sales\/cano.jpg"
+    },
+    {
+     "IDp": "34000004.2",
+     "Descrip": "Reductor caño 100 a 40 mm",
+     "Price": 250,
+     "Obs": "Reductor previo a codo para extremo de caño acanalado",
+     "Stock": 10,
+     "Sold": 50,
+     "URLimg": "..\/media\/Sales\/110a40.jpg"
+    },
+    {
+     "IDp": "37000004.6",
+     "Descrip": "Codo 40 mm x1",
+     "Price": 120,
+     "Stock": 15,
+     "Sold": 3,
+     "URLimg": "..\/media\/Sales\/codos.jpg"
+    },
+    {
+     "IDp": 40000005,
+     "Descrip": "Pegamento caños PVC",
+     "Price": 2527,
+     "Stock": 12,
+     "Sold": 1,
+     "URLimg": "..\/media\/Sales\/pegamento.jpg"
+    },
+    {
+     "IDp": "43000005.4",
+     "Descrip": "Codo 40 mm x10",
+     "Price": 1105,
+     "Obs": "Codo 40 mm de diámetro por 10 unidades",
+     "Stock": 0,
+     "Sold": 8,
+     "URLimg": "..\/media\/Sales\/codos.jpg"
+    },
+    {
+     "IDp": "46000005.8",
+     "Descrip": "Reductor PH",
+     "Price": 4500,
+     "Obs": "Reductor de PH, un PH equilibrado es escencial para el cultivo en hidroponia.",
+     "Stock": 24,
+     "Sold": 9,
+     "URLimg": "..\/media\/Sales\/reductorph.jpg"
+    },
+    {
+     "IDp": "49000006.2",
+     "Descrip": "Reductor caño 100 a 40 mm x10",
+     "Price": 2250,
+     "Obs": "Reductor de caño de 100 a 40 mm por 10 unidades",
+     "Stock": 40,
+     "Sold": 10,
+     "URLimg": "..\/media\/Sales\/110a40.jpg"
+    },
+    {
+     "IDp": "52000006.6",
+     "Descrip": "Elevador PH",
+     "Price": 4500,
+     "Obs": "Elevador de PH, un PH equilibrado es escencial para el cultivo en hidroponia.",
+     "Stock": 45,
+     "Sold": 12,
+     "URLimg": "..\/media\/Sales\/elevadorph.jpg"
+    },
+    {
+     "IDp": 55000007,
+     "Descrip": "Potenciador Raiz",
+     "Price": 2200,
+     "Obs": "Para aquellos cultivos que requieren de una buena enraización este producto es el ideal",
+     "Stock": 40,
+     "Sold": 15,
+     "URLimg": "..\/media\/Sales\/Potraiz.jpg"
+    },
+    {
+     "IDp": "58000007.4",
+     "Descrip": "Minerales escenciales",
+     "Price": 5000,
+     "Obs": "Combo de minerales escensiales para todo tipo de cultivo",
+     "Stock": 32,
+     "Sold": 14,
+     "URLimg": "..\/media\/Sales\/micmac.jpg"
+    },
+    {
+     "IDp": "61000007.8",
+     "Descrip": "Sales Potasio",
+     "Price": 2,
+     "Obs": "Sales específicas de Potasio para cultivos que así lo requieran",
+     "Stock": 33,
+     "Sold": 5,
+     "URLimg": "..\/media\/Sales\/Vegetacion.jpg"
+    }
+   ]

@@ -1,0 +1,44 @@
+#Gsales>div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap:1em;    
+
+}
+ 
+#Gsales>div>div{
+    border: solid rgb(14, 173, 236);
+    background-color: rgb(237, 246, 243);
+    border-radius: 2%;
+}
+#Gsales>div>div>div>img{
+    height: 30vh;
+    
+}
+#Gsales>div>div>h3{
+    text-align: center;
+}
+
+#Gsales>div>div>p{
+    text-align: center;
+    font-size:4vh;
+    
+}
+#Gsales>div>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+
+#Gsales>div>div:hover{
+    transform: scale(1.3);
+}
+
+.buybut{
+    background: rgb(235, 235, 237);
+    background: linear-gradient(0deg, rgb(108, 156, 234) 0%, rgb(117, 193, 125) 50%);
+    border-radius: 15%;
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+        
+}
