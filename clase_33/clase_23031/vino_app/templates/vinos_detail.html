@@ -1,0 +1,17 @@
+{% extends 'base_vinoteca.html' %}
+{% block content %}
+
+<main>
+    <div class="main-color-vinos">
+        <h1>{{vino.nombre}}</h1>
+        {% for label, value in vino.get_fields %}
+
+        <p>{{label | upper}}</p>
+        <p>{{value}}</p>
+
+        {% endfor %}
+
+        <a href="{% url 'vinos:all' %}">BACK</a>
+    </div>
+</main>
+{% endblock %}

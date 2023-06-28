@@ -1,0 +1,17 @@
+{% extends 'base_vinoteca.html' %}
+{% block content %}
+
+<main>
+    <div class="main-color-vinos">
+        <h1>Estas seguro ue deseas borrar este vino?</h1>
+        <h2>{{vino.nombre}}</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div>{{form.as_p}}</div>
+            <input type="submit" value="{{ tipo }}" />
+        </form>
+
+        <a href="{% url 'vinos:all' %}">Cancelar</a>
+    </div>
+</main>
+{% endblock %}
