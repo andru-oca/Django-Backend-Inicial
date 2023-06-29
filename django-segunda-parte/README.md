@@ -48,7 +48,7 @@ $ source venv/bin/activate
 -   instalar las dependecias para usar Django
 
 ```
-$ pip insall django
+$ pip install django
 ```
 
 -   el proyecto deberá estar en el mismo nivel del venv
