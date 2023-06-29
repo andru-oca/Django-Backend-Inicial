@@ -68,6 +68,7 @@ Pasos:
     -   crear una vista simple con FunctionBase View vs Django ClassBase View
 
 [Bibliografia extra](https://docs.hektorprofe.net/django/web-personal/patron-mvt-modelo-vista-template/)
+[PRINCIPIO DE SoC](https://dev.to/tamerlang/separation-of-concerns-the-simple-way-4jp2)
 
 -   IMPLEMENTAR UN PROYECTO ARMADO EN FRONTEND y enlazado.
 
@@ -77,6 +78,101 @@ SAMPLE : https://github.com/andru-oca/clase_21.git
 Practica Vinoteca
 ---
 
+```
+virtualenv venv
+
+```
+
+activacion del entorno virtual
 
 
+```
+source venv/bin/activate
+
+```
+
+El proyecto integracion lo podemos integrar colocando las dependencias de un archivo de texto.
+_requirements.txt_
+
+```
+$ pip install -r requirements.txt
+
+```
+Con esto ya podemos integrar nuestro front.
+Creamos nuestro proyecto con django:
+
+```
+$ django-admin startproject vinoteca .
+```
+
+Creamos una vista que me va a permitir realizar un endpoint para la ruta de nuestra pagina, en esta ocasion se realiza para el inicio con el elemento index el cual esta usando un template de jinja.
+
+
+Es necesario entender la primera logica que teniamos con las vistas, las cuales por medio de una ruta, va a devolver informacion, en este caso un return de la respuesta de un request del tipo GET al servidor de django:
+
+```
+from django.views.generic import TemplateView
+
+class Vinoteca(TemplateView):
+    template_name = "index.html"
+    
+```
+
+Esa TemplateView son implementaciones genericas ya determinadas por django.
+
+Posterior tenemos que indicarle las rutas en el archivo _urls.py_ del proyecto:
+
+```
+from django.contrib import admin
+from django.urls import path , include
+
+from .views import Vinoteca
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path("", Vinoteca.as_view(), name="vinoteca")
+]
+
+    
+```
+
+En este caso importamos la clase Vinoteca y usamos uno de los metodos heredados de la clase TemplateView , el cual es as_view(), le indicamos el name el cual sera el alias que va a reconocer internamente el framework
+
+Antes del final es necesario entender los templates, esa carpeta de template es muy importante de de colocar los archivos html que utilizamos para el proyecto, el mismo va a tener sintaxis jinja que me va a permitir renderizar sectores de codigos de manera mas sencilla.
+Sin embargo esto hay que tamabien declararlo en los settings del proyecto:
+
+```
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [BASE_DIR / "templates"],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+```
+
+
+Con esto le declaramos que a partir de la ruta raiz tendremos la carpeta templates: **vinoteca**/templates
+
+
+Por ultimo hay que configurar los _settigns.py_ para poder tener los staticos de esa pagina 
+
+```
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static"]
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
+```
+Con esto ya colocado ya tendremos el proyecto de front end integrado al servidor que trae el framework de django
 
