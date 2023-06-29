@@ -6,5 +6,5 @@ from .views import Vinoteca
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", Vinoteca.as_view(), name="vinoteca"),
-    path("vinos/", include("vino_app.urls")),
+    path("vinos/", include("app_vino.urls")),
 ]

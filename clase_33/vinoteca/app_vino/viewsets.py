@@ -1,6 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
 from .models import Vino
-from .serializer import VinoSerializer
+from .serializers import VinoSerializer
 
 class VinoViewSet(ModelViewSet):
     queryset = Vino.objects.all()

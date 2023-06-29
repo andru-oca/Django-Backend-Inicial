@@ -1,12 +1,12 @@
 {% extends 'base_vinoteca.html' %}
 
 {% block content %}
+
 <main>
     <div class="main-color-vinos">
         <h1>Todos los vinos</h1>
         <h2><a href="{% url 'vinos:create' %}">CREAR VINO</a></h2>
-
-        {% for vino in vino_list %}
+        {% for vino in vino_list%}
         <div class="list">
             <span>
                 <p>{{forloop.counter}}</p>
@@ -31,4 +31,4 @@
         {% endfor %}
     </div>
 </main>
-{% endblock%}
+{% endblock %}
