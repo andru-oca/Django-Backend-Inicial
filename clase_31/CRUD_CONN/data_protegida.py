@@ -1,7 +1,0 @@
-
-MYSQLDATABASE="docker_users"
-MYSQLUSER="root"
-MYSQLHOST="localhost"
-MYSQLPASSWORD="admin"
-MYSQLPORT=3306
-MYSQL_TABLE="users"
