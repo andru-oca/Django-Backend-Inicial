@@ -10,7 +10,7 @@ NOMBRE_DE_USUARIO = <nombre_usuario_de_pythonwhere>
 - Generar una cuenta de en pythonanywhere
     - https://www.pythonanywhere.com/user/NOMBRE_DE_USUARIO/
 
-- Generar una API token
+- Generar una API token _esto se encuentra en account_
 
 - Generar una consola en la dashboard , es necesario entender que es una máquina virtual en donde se está colocando el codigo como elemento necesario para poder levantarlo como elemento único a usar en ese entorno.
     - New Console >> Bash\
