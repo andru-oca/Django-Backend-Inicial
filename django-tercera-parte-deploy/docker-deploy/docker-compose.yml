@@ -36,6 +36,9 @@ services:
             - staticfiles:/src/staticfiles
         env_file:
             - .env_variables/production.env
+        depends_on:
+            - django
+
 
     mysql:
         image: mysql:v0.1
