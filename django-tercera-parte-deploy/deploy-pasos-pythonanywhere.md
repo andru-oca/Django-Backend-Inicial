@@ -133,3 +133,7 @@ Integracion con una base de datos en PythonAnyWhere
 - Hacer la migración:
     - python manage.py makemigrations
     - python manage.py migrate
+
+
+
+[BIBLIOGRAFIA EXTRA Deploy en pythonanywhere](https://zappycode.com/tutorials/deploy-django-project-on-pythonanywhere)
