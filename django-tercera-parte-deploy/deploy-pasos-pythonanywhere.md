@@ -46,6 +46,9 @@ Forma manual entendiendo los pasos generales.
 
     - con esa información ahora podemos ir al sector de web de pythonanywhere > en este caso como es manual vamos a usar una configuracion manual > seleccionamos la version de python 3.10 > con este caso vamos a utilizar archivos como el wsgi de django
 
+---
+
+## Volvamos a la pagina principal en el sector del dashboard y crear una WEB App
 
 - sector Code :
 
