@@ -113,10 +113,10 @@ Integracion con una base de datos en PythonAnyWhere
 
 - Creacion de una database en el sector de Database
 - Crear un database con Database name en el sector de Create a Database
-    - DATABASE NAME:
-       **NOMBRE_DE_USUARIO**$vinoteca
-      ---
-
+- DATABASE NAME:
+       ==> vinoteca
+  Creandome una base de datos con el nombre de **NOMBRE_DE_USUARIO**$vinoteca
+  
     * host : <nombre_de_usuario>.mysql.pythonanywhere-services.com
     * username : <nombre_de_usuario>
     * port : 3306
