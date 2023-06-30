@@ -40,9 +40,9 @@ Forma manual entendiendo los pasos generales.
     - pip install -r requirements.txt
 
 - posterior a levantar el entorno y haber instalado las dependecias, es necesario ubicar los siguientes archivos:
-    - manage.py =>  en mi caso : /home/NOMBRE_DE_USUARIO/vinoteca_django_deploy/vinoteca
-    - settings => /home/NOMBRE_DE_USUARIO/vinoteca_django_deploy/vinoteca
-    - el virtualenv => /home/NOMBRE_DE_USUARIO/.virtualenvs/venv
+    - **manage.py** =>  en mi caso : /home/NOMBRE_DE_USUARIO/vinoteca_django_deploy/vinoteca
+    - **settings.py** => /home/NOMBRE_DE_USUARIO/vinoteca_django_deploy/vinoteca
+    - el **virtualenv** => /home/NOMBRE_DE_USUARIO/.virtualenvs/venv
 
     - con esa información ahora podemos ir al sector de web de pythonanywhere > en este caso como es manual vamos a usar una configuracion manual > seleccionamos la version de python 3.10 > con este caso vamos a utilizar archivos como el wsgi de django
 
