@@ -80,13 +80,6 @@ application = get_wsgi_application()
 ---
 ### Ir a la consola de PythonAnywhere y seguir los pasos en el proyecto
 
-- al tener esto ya creado en sí podemos correr, pero nos van a dar unos errores pero son inherentes  a la configuracion de los settings.
-
-
-- migramos la base de datos, en este caso aun mantenemos el archivo sqlite3, pero lo podemos migrar con alguna base de datos, como la que nos presta pythonanywhere en mysql.
-    - python manage.py makemigrations
-    - python manage.py migrate
-
 - editemos los settings.py para generar el deploy necesario: 
 
     - Modificaciones: 
@@ -94,6 +87,15 @@ application = get_wsgi_application()
         - ALLOWED_HOSTS = ["NOMBRE_DE_USUARIO.pythonanywhere.com"]
         - STATIC_ROOT = [BASE_DIR / "static"]
         - comentamos el directorio de los STATICFILES_DIRS
+
+- al tener esto ya creado en sí podemos correr, pero nos van a dar unos errores pero son inherentes  a la configuracion de los settings.
+
+
+- migramos la base de datos, en este caso aun mantenemos el archivo sqlite3, pero lo podemos migrar con alguna base de datos, como la que nos presta pythonanywhere en mysql.
+    - python manage.py makemigrations
+    - python manage.py migrate
+
+
 
 - generemos los archivos en un solo lugar que serán los archivos staticos.
     -   python manage.py collectstatic
