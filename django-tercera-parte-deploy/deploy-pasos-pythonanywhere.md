@@ -1,14 +1,16 @@
 Deploy en PythonAnywhere
 ---
 
+NOMBRE_DE_USUARIO = <nombre_usuario_de_pythonwhere>
+
 
 - Tener el repositorio del Proyecto Armado en github
     - https://github.com/andru-oca/vinoteca_django_deploy.git
 
 - Generar una cuenta de en pythonanywhere
-    - https://www.pythonanywhere.com/
+    - https://www.pythonanywhere.com/user/NOMBRE_DE_USUARIO/
 
-- Generar una API token en el sector de settings
+- Generar una API token
 
 - Generar una consola en la dashboard , es necesario entender que es una máquina virtual en donde se está colocando el codigo como elemento necesario para poder levantarlo como elemento único a usar en ese entorno.
     - New Console >> Bash\
@@ -38,9 +40,9 @@ Forma manual entendiendo los pasos generales.
     - pip install -r requirements.txt
 
 - posterior a levantar el entorno y haber instalado las dependecias, es necesario ubicar los siguientes archivos:
-    - manage.py =>  en mi caso : /home/andersonCodo/vinoteca_django_deploy/vinoteca
-    - settings => /home/andersonCodo/vinoteca_django_deploy/vinoteca
-    - el virtualenv => /home/andersonCodo/.virtualenvs/venv
+    - manage.py =>  en mi caso : /home/NOMBRE_DE_USUARIO/vinoteca_django_deploy/vinoteca
+    - settings => /home/NOMBRE_DE_USUARIO/vinoteca_django_deploy/vinoteca
+    - el virtualenv => /home/NOMBRE_DE_USUARIO/.virtualenvs/venv
 
     - con esa información ahora podemos ir al sector de web de pythonanywhere > en este caso como es manual vamos a usar una configuracion manual > seleccionamos la version de python 3.10 > con este caso vamos a utilizar archivos como el wsgi de django
 
@@ -48,7 +50,7 @@ Forma manual entendiendo los pasos generales.
 - sector Code :
 
     - Source code: (el path de la carpeta donde estaría el proyecto)
-        - /home/andersonCodo/vinoteca_django_deploy/vinoteca
+        - /home/NOMBRE_DE_USUARIO/vinoteca_django_deploy/vinoteca
 
 
 - modificacion del wsgi_file:
@@ -59,7 +61,7 @@ import os
 import sys
 
 # le indicamos el path del project
-path = '/home/andersonCodo/vinoteca_django_deploy/vinoteca'
+path = '/home/NOMBRE_DE_USUARIO/vinoteca_django_deploy/vinoteca'
 if path not in sys.path:
     sys.path.append(path)
 
@@ -85,7 +87,7 @@ application = get_wsgi_application()
 
     - Modificaciones: 
         - DEBUG= False
-        - ALLOWED_HOSTS = ["andersonCodo.pythonanywhere.com"]
+        - ALLOWED_HOSTS = ["NOMBRE_DE_USUARIO.pythonanywhere.com"]
         - STATIC_ROOT = [BASE_DIR / "static"]
         - comentamos el directorio de los STATICFILES_DIRS
 
@@ -94,7 +96,7 @@ application = get_wsgi_application()
         - seleccionamos la opcion de "yes" para  hacer una collect de los statics
 
 - Por ultimo lo agregamos al sector de Static files del dashboard    
-    - /home/andersonCodo/vinoteca_django_deploy/vinoteca/static
+    - /home/NOMBRE_DE_USUARIO/vinoteca_django_deploy/vinoteca/static
 
 - Paso final hacemos un reload para cargar la nueva versión.
 
@@ -104,14 +106,14 @@ Integracion con una base de datos en PythonAnyWhere
 ---
 
 - Creacion de una database en el sector de Database
-    nombre_de_usuario = andersonCodo
 
 
-    host : <nombre_de_usuario>.mysql.pythonanywhere-services.com
-    username : <nombre_de_usuario>
-    port : 3306
-    password : vinoteca1234
-    database : <nombre_de_usuario>$vinoteca
+
+    * host : <nombre_de_usuario>.mysql.pythonanywhere-services.com
+    * username : <nombre_de_usuario>
+    * port : 3306
+    * password : vinoteca1234
+    * database : <nombre_de_usuario>$vinoteca
 
 -   Integracion en settings.py
 
@@ -119,10 +121,10 @@ Integracion con una base de datos en PythonAnyWhere
     DATABASES = {
     'default': {
                 'ENGINE': 'django.db.backends.mysql',
-                'NAME': 'vinoteca',
-                'USER': 'admin_user',
+                'NAME': 'NOMBRE_DE_USUARIO$vinoteca',
+                'USER': 'NOMBRE_DE_USUARIO',
                 'PASSWORD': 'vinoteca1234',
-                'HOST': 'andersonCodo.mysql.pythonanywhere-services.com',
+                'HOST': 'NOMBRE_DE_USUARIO.mysql.pythonanywhere-services.com',
                 'PORT': '3306',
             }
     }
