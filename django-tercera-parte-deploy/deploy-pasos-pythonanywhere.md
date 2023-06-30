@@ -142,6 +142,7 @@ Integracion con una base de datos en PythonAnyWhere
     - python manage.py makemigrations
     - python manage.py migrate
 
+HACER UN RELOAD EN EL SECTOR DE WEB
 
 
 [BIBLIOGRAFIA EXTRA Deploy en pythonanywhere](https://zappycode.com/tutorials/deploy-django-project-on-pythonanywhere)
