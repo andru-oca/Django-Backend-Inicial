@@ -49,7 +49,8 @@ Forma manual entendiendo los pasos generales.
 ---
 
 ## Volvamos a la pagina principal en el sector del dashboard y crear una WEB App
-
+- crear una web app utilizando de manera manual el proyecto.
+- Add New Wep App > crear manualmente con la ultima version de python
 - sector Code :
 
     - Source code: (el path de la carpeta donde estaría el proyecto)
