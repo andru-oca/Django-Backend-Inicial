@@ -72,7 +72,7 @@ application = get_wsgi_application()
 ```
 
 - agregamos la fuente del entorno virtual
-    - /home/andersonCodo/.virtualenvs/venv
+    - /home/NOMBRE_DE_USUARIO/.virtualenvs/venv
 
 
 
