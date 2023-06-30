@@ -85,7 +85,7 @@ application = get_wsgi_application()
     - Modificaciones: 
         - DEBUG= False
         - ALLOWED_HOSTS = ["NOMBRE_DE_USUARIO.pythonanywhere.com"]
-        - STATIC_ROOT = [BASE_DIR / "static"]
+        - STATIC_ROOT = BASE_DIR / "static"
         - comentamos el directorio de los STATICFILES_DIRS
 
 - al tener esto ya creado en sí podemos correr, pero nos van a dar unos errores pero son inherentes  a la configuracion de los settings.
