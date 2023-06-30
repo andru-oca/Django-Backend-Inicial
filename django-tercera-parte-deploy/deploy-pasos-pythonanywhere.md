@@ -106,7 +106,7 @@ Integracion con una base de datos en PythonAnyWhere
 ---
 
 - Creacion de una database en el sector de Database
-
+- Crear un database con Database name en el sector de Create a Database
 
 
     * host : <nombre_de_usuario>.mysql.pythonanywhere-services.com
