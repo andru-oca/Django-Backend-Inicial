@@ -77,7 +77,8 @@ application = get_wsgi_application()
 - agregamos la fuente del entorno virtual
     - /home/NOMBRE_DE_USUARIO/.virtualenvs/venv
 
-
+---
+### Ir a la consola de PythonAnywhere y seguir los pasos en el proyecto
 
 - al tener esto ya creado en sí podemos correr, pero nos van a dar unos errores pero son inherentes  a la configuracion de los settings.
 
