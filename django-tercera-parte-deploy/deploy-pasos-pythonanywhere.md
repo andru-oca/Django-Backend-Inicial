@@ -105,7 +105,7 @@ application = get_wsgi_application()
     -   python manage.py collectstatic
         - seleccionamos la opcion de "yes" para  hacer una collect de los statics
 
-- Por ultimo lo agregamos al sector de Static files del dashboard    
+- Agregar en web app page en el sector de STATIC URL  /static/ => y apregar el path   
     - /home/NOMBRE_DE_USUARIO/vinoteca_django_deploy/vinoteca/static
 
 - Paso final hacemos un reload para cargar la nueva versión.
