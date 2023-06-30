@@ -75,6 +75,9 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'vinoteca.settings')
 application = get_wsgi_application()
 ```
 
+
+## Volvamos a la pagina principal en el sector web app y agregamos
+
 - agregamos la fuente del entorno virtual
     - /home/NOMBRE_DE_USUARIO/.virtualenvs/venv
 
