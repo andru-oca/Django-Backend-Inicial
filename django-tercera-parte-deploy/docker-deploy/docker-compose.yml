@@ -1,7 +1,7 @@
 version: "3.9"
 
 services:
-     mysql:
+    mysql:
          image: mysql:v0.1
          container_name: mysql
          build:
@@ -18,7 +18,7 @@ services:
                  aliases:
                      - mysql_host
 
-     adminer:
+    adminer:
          image: adminer
          restart: always
          ports:
@@ -28,8 +28,6 @@ services:
              django_network:
                  aliases:
                      - adminer_host
-
-
 
     django:
         image: django:0.0.1
@@ -49,26 +47,25 @@ services:
             - staticfiles:/src/staticfiles
         env_file:
             - .env_variables/production.env
-
-         depends_on:
+        depends_on:
              - mysql
 
-     nginx:
-         container_name: nginx
-         build:
-             context: ./nginx/
-         volumes:
-             - staticfiles:/home/app/staticfiles
-             - ./nginx:/etc/nginx/conf.d
-         ports:
-             - "80:80"
-         depends_on:
-             - django
+    nginx:
+        container_name: nginx
+        build:
+            context: ./nginx/
+        volumes:
+            - staticfiles:/home/app/staticfiles
+            - ./nginx:/etc/nginx/conf.d
+        ports:
+            - "80:80"
+        depends_on:
+            - django
 
-         networks:
-             django_network:
-                 aliases:
-                     - nginx_host
+        networks:
+            django_network:
+                aliases:
+                    - nginx_host
 
 
 networks:
