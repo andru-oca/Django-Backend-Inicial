@@ -1,22 +1,35 @@
 version: "3.9"
 
 services:
-    nginx:
-        container_name: nginx
-        build:
-            context: ./nginx/
-        volumes:
-            - staticfiles:/home/app/staticfiles
-            - ./nginx:/etc/nginx/conf.d
-        ports:
-            - "80:80"
-        depends_on:
-            - django
+     mysql:
+         image: mysql:v0.1
+         container_name: mysql
+         build:
+             context: .
+             dockerfile: ./db/Dockerfile
+         command: --default-authentication-plugin=mysql_native_password
+         restart: always
+         environment:
+             MYSQL_ROOT_PASSWORD: admin
+         ports:
+             - "3306:3306"
+         networks:
+             django_network:
+                 aliases:
+                     - mysql_host
 
-        networks:
-            django_network:
-                aliases:
-                    - nginx_host
+     adminer:
+         image: adminer
+         restart: always
+         ports:
+         - 8080:8080
+
+         networks:
+             django_network:
+                 aliases:
+                     - adminer_host
+
+
 
     django:
         image: django:0.0.1
@@ -36,26 +49,27 @@ services:
             - staticfiles:/src/staticfiles
         env_file:
             - .env_variables/production.env
-        depends_on:
-            - django
 
+         depends_on:
+             - mysql
 
-    mysql:
-        image: mysql:v0.1
-        container_name: mysql
-        build:
-            context: .
-            dockerfile: ./db/Dockerfile
-        command: --default-authentication-plugin=mysql_native_password
-        restart: always
-        environment:
-            MYSQL_ROOT_PASSWORD: admin
-        ports:
-            - "3307:3306"
-        networks:
-            django_network:
-                aliases:
-                    - mysql_host
+     nginx:
+         container_name: nginx
+         build:
+             context: ./nginx/
+         volumes:
+             - staticfiles:/home/app/staticfiles
+             - ./nginx:/etc/nginx/conf.d
+         ports:
+             - "80:80"
+         depends_on:
+             - django
+
+         networks:
+             django_network:
+                 aliases:
+                     - nginx_host
+
 
 networks:
     django_network:

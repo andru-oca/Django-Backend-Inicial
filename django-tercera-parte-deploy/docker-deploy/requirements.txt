@@ -4,5 +4,5 @@ djangorestframework==3.14.0
 pytz==2023.3
 sqlparse==0.4.4
 typing_extensions==4.7.0
-mysqlclient
+mysqlclient==2.1.1
 gunicorn
