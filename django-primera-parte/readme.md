@@ -170,9 +170,9 @@ Por ultimo hay que configurar los _settigns.py_ para poder tener los staticos de
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static"]
+    BASE_DIR / "staticfiles"]
 
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATIC_ROOT = BASE_DIR / "static"
 ```
 Con esto ya colocado ya tendremos el proyecto de front end integrado al servidor que trae el framework de django
 
