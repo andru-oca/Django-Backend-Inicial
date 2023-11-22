@@ -50,6 +50,7 @@ Pasos:
 -   Generar un virtualenv :
 
     -   en linux virtualenv venv | en windows python -m venv <nombre_proyecto:generalmente VENV>
+    -   Activar virtualnv  : linux source venv/bin/activate | venv\Scripts\activate
 
     -   instalar django :
         ```
