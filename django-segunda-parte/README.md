@@ -86,6 +86,11 @@ $ cd vinoteca
 
 ```
 $ python manage.py startapp app_vino
+
+or
+
+$ django-admin startapp app_vino
+
 ```
 
 -   Generamos un Modelo:
