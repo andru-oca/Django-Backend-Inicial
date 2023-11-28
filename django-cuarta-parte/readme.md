@@ -1,3 +1,13 @@
+# Documentacion de esta API
+- Se genera entorno de una API usando DRF, pillow y simpleJWT
+
+- Dependecias detalladas en el archivo de requirements.txt
+
+```
+    $ pip install -r requirements.txt
+```
+
+
 ## API Routes Documentation
 
 ### Authentication
