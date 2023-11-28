@@ -16,3 +16,9 @@ Tercera parte
 ---
 [Deploy del proyecto utilizando Docker y en PythonAnywhere ](./django-tercera-parte-deploy/)
 Se genera un deploy utilizando los pasos puestos en el readme para generar la puesta en produccion del proyecto. Ademas de tambien poder crear un deploy por medio de contenedores con el objeto de tener un proyecto para puesta a prueba en un entorno dev local o puesta en produccion en alguna plataforma cloud.
+
+Cuarta Parte (Opcional)
+---
+[Deploy en Render](./django-cuarta-parte/)
+Se genera un API, esta tiene como posibilidad de acceder usando cors, acceso a media, para almacenar imagenes, y productos relacionados.
+Se genera a modo de ejemplo un deploy en Render.
