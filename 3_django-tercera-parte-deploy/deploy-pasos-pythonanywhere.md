@@ -94,7 +94,8 @@ application = get_wsgi_application()
 
 - al tener esto ya creado en sí podemos correr, pero nos van a dar unos errores pero son inherentes  a la configuracion de los settings.
 
-
+- EN WEB APPS, al hacer el collectatic, cambiar en lugar de .../static  .../staticfiles
+- 
 - migramos la base de datos, en este caso aun mantenemos el archivo sqlite3, pero lo podemos migrar con alguna base de datos, como la que nos presta pythonanywhere en mysql.
     - python manage.py makemigrations
     - python manage.py migrate
