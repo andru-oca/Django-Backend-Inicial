@@ -1,4 +1,0 @@
-CREATE DATABASE IF NOT EXISTS vinoteca;
-
-
-USE vinoteca;
