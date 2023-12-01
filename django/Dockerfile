@@ -16,3 +16,10 @@ RUN pip install -r requirements.txt
 ENTRYPOINT [ "sh" , "entrypoint.sh" ]
 
 EXPOSE 80
+
+
+# docker build -t django .
+# docker run --name django-deploy -p 80:80 -d  --env-file production.env
+# docker exec -it django-deploy sh
+
+
