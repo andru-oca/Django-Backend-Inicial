@@ -163,4 +163,4 @@ REST_FRAMEWORK = {
 
 
 
-CSRF_TRUSTED_ORIGINS = ["*"]
+CSRF_TRUSTED_ORIGINS = ['https://*','https://*.127.0.0.1']
