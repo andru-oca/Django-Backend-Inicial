@@ -164,3 +164,5 @@ REST_FRAMEWORK = {
 
 
 CSRF_TRUSTED_ORIGINS = ['https://*','https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS += os.environ.get("DJANGO_CSRF").split(",")
+
