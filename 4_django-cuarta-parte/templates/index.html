@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static './img/favicon.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+    <title>API</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__item landing-page-container">
+            <div class="content__wrapper">
+
+                <header class="header">
+                    <div class="menu-icon header__item">
+                        <span class="menu-icon__line"></span>
+                    </div>
+
+                    <h1 class="heading header__item">Products API</h1>
+
+                </header>
+
+                <p class="coords"></p>
+
+                <div class="ellipses-container">
+
+                    <h2 class="greeting">API LANDING PAGE</h2>
+
+                    <div class="ellipses ellipses__outer--thin">
+
+                        <div class="ellipses ellipses__orbit"></div>
+
+                    </div>
+
+                    <div class="ellipses ellipses__outer--thick"></div>
+                </div>
+
+                <div class="scroller">
+                    <p class="page-title">
+                        <a href="admin/" class="admin">
+                            Andru API ADMIN
+                        </a>
+                    </p>
+
+                    <div class="timeline">
+                        <span class="timeline__unit"></span>
+                        <span class="timeline__unit timeline__unit--active"></span>
+                        <span class="timeline__unit"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+<script src="{% static './js/index.js' %}"></script>
+
+</html>

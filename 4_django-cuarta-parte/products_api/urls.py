@@ -19,6 +19,7 @@ from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
 from django.urls import include
+from .views import IndexPage
 
 
 from rest_framework_simplejwt.views import (
@@ -29,6 +30,8 @@ from rest_framework_simplejwt.views import (
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+        path("", IndexPage.as_view(), name="index"),
+
     path("api/", include("app_products.urls")),
 ]
 
