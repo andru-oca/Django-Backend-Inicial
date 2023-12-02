@@ -4,7 +4,7 @@ set -o errexit  # exit on error
 
 pip install -r requirements.txt
 
-mkdir static staticfiles media
+mkdir  staticfiles media
 python manage.py collectstatic -link --no-input
 python manage.py makemigrations
 python manage.py migrate
