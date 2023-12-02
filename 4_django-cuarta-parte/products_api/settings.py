@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 CUSTOM_APPS = ["app_products"]
 
-EXTRA_APPS = ["rest_framework", "rest_framework_simplejwt"]
+EXTRA_APPS = ["rest_framework", "rest_framework_simplejwt",    "whitenoise.runserver_nostatic"]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -135,7 +135,8 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 
 
@@ -158,3 +159,7 @@ REST_FRAMEWORK = {
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     )
 }
+
+
+CSRF_TRUSTED_ORIGINS = ['https://*','https://*.127.0.0.1']
+# CSRF_TRUSTED_ORIGINS += os.environ.get("DJANGO_CSRF").split(",")
